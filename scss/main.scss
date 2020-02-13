@@ -1,5 +1,4 @@
 @import "_variables.scss";
-@import "_usergallery.scss";
 html {
   margin: 0;
   padding: 0;
@@ -9,7 +8,7 @@ html {
 body {
   background-color: color(grey);
 }
-.header {
+. {
   position: relative;
   height: 100vh;
 
