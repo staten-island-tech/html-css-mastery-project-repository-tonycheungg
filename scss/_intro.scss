@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
   background-image: linear-gradient(
-      to right bottom,
+      to right,
       rgba(color(primary), 0.5),
       rgba(color(primary-light), 0.5)
     ),
@@ -12,7 +12,6 @@
 
   -webkit-clip-path: circle(50% at 50% 50%);
   clip-path: circle(50% at 50% 50%);
-  
 }
 .title {
   position: absolute;
@@ -20,15 +19,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 500%;
+  font-size: 300%;
 }
 .heading {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.heading-title {
-}
+
 .btn {
   background-color: color(primary);
   border: none;
@@ -49,4 +47,8 @@
 .zero:hover {
   opacity: 1;
   transition: all 0.3s ease 0s;
+}
+.zero:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
