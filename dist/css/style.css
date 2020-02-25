@@ -63,7 +63,7 @@
           transform: translateY(4px);
 }
 
-section {
+.section-two {
   position: relative;
   height: 100vh;
   background-image: url(../media/background.jpg);
