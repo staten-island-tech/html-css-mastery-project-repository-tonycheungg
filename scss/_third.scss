@@ -5,6 +5,26 @@
     justify-content: center;
     align-items: center;
 }
+.card-container{
+  padding: 0;
+  border: 0;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablet {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  @include tablet {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  @include tablet {
+    flex-direction: row;
+  }
+}
 .card{
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -13,9 +33,7 @@
     margin-right: auto;
 }
 .card-side{
-    height: 500px;
-    width: 300px;
-    z-index: 1;
+  z-index: 1;
   transition: all 1s;
   font-size: 3rem;
   color: white;
@@ -27,17 +45,16 @@
   }
   @include laptop {
     height: 25rem;
-    width: 35rem;
+    width: 30rem;
     border-radius: 1rem;
   }
   @include desktop {
     height: 60rem;
-    width: 40rem;
+    width: 30rem;
     border-radius: 1rem;
   }
 }
 .card-side-front{
-    background-image: url(../media/bike.jpg);
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -46,13 +63,34 @@
     z-index: 1;
     transition: all 1s;
 }
+#card-side-front-1{
+  background-image: url(../media/pic1.jpg);
+}
+#card-side-front-2{
+  background-image: url(../media/pic1.jpg);
+}
+#card-side-front-3{
+  background-image: url(../media/pic1.jpg);
+}
 .card-side-back{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    transform: rotateY(-180deg);
+    transform: rotateY(180deg);
     transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card-side-back-1{
+background-color: blue;
+}
+#card-side-back-2{
+  background-color: blue;
+}
+#card-side-back-3{
+  background-color: blue;
 }
 .card:hover .card-side-front {
     transform: rotateY(-180deg);
@@ -61,4 +99,3 @@
   .card:hover .card-side-back {
     transform: rotateY(0deg);
   }
-  
