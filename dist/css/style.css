@@ -145,33 +145,51 @@
           transform: translateY(4px);
 }
 
-.header-three {
+.header-second {
+  text-align: center;
+  color: white;
   font-size: 300%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+}
+
+.section-three {
+  height: 100vh;
+  background-image: url(../media/bridge.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1rem;
 }
 
 .card-container {
-  padding: 0;
-  border: 0;
   height: 100vh;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
 }
 
 @media (min-width: 600px) {
@@ -186,24 +204,26 @@
   }
 }
 
-@media (min-width: 600px) {
-  .card-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .card-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -214,6 +234,9 @@
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .card-side {
@@ -228,49 +251,52 @@
 
 @media (min-width: 600px) {
   .card-side {
-    height: 15rem;
-    width: 25rem;
-    border-radius: 1rem;
+    height: 10rem;
+    width: 10rem;
   }
 }
 
 @media (min-width: 900px) {
   .card-side {
-    height: 25rem;
+    height: 50rem;
     width: 30rem;
-    border-radius: 1rem;
   }
 }
 
 @media (min-width: 1100px) {
   .card-side {
     height: 60rem;
-    width: 30rem;
-    border-radius: 1rem;
+    width: 35rem;
   }
 }
 
 .card-side-front {
   background-size: cover;
   background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 1;
   -webkit-transition: all 1s;
   transition: all 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #card-side-front-1 {
-  background-image: url(../media/pic1.jpg);
+  background-image: url(../media/site.jpg);
 }
 
 #card-side-front-2 {
-  background-image: url(../media/pic1.jpg);
+  background-image: url(../media/e.jpg);
 }
 
 #card-side-front-3 {
-  background-image: url(../media/pic1.jpg);
+  background-image: url(../media/f.jpg);
 }
 
 .card-side-back {
@@ -294,15 +320,15 @@
 }
 
 #card-side-back-1 {
-  background-color: blue;
+  opacity: 0.7;
 }
 
 #card-side-back-2 {
-  background-color: blue;
+  opacity: 0.7;
 }
 
 #card-side-back-3 {
-  background-color: blue;
+  opacity: 0.7;
 }
 
 .card:hover .card-side-front {
