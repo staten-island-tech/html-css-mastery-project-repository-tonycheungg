@@ -8,14 +8,20 @@ $colors: (
 );
 
 
+$phone: 400px;
 $tablet: 600px;
-$laptop: 900px;
-$desktop: 1100px;
+$laptop: 800px;
+$desktop: 1000px;
 
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
+@mixin phone {
+  @media(min-width: #{$tablet}) {
+    @content;
+  }
+}
 @mixin tablet {
   @media(min-width: #{$tablet}) {
     @content;
