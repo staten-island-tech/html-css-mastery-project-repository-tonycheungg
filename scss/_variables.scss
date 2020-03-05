@@ -8,7 +8,7 @@ $colors: (
 );
 
 
-$phone: 400px;
+$phone: 350px;
 $tablet: 600px;
 $laptop: 800px;
 $desktop: 1000px;
@@ -18,7 +18,7 @@ $desktop: 1000px;
 }
 
 @mixin phone {
-  @media(min-width: #{$tablet}) {
+  @media(min-width: #{$phone}) {
     @content;
   }
 }
