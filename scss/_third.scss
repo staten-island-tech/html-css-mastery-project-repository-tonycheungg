@@ -54,6 +54,7 @@
   transition: all 1s;
   font-size: 3rem;
   color: white;
+  border: 0.5rem solid black;
   backface-visibility: hidden;
   @include phone{
     height: 10rem;
@@ -97,6 +98,7 @@
     z-index: 0;
     transform: rotateY(180deg);
     transition: all 1s;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
