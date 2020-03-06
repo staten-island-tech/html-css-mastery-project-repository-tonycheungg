@@ -40,14 +40,28 @@
 }
 
 .picture-parent {
-    display: flex;
-    justify-content: flex-end;
     width: 100rem;
     height: 50rem;
+    @include phone{
+        height: 0rem;
+        width: 0rem;
+      }
+      @include tablet {
+        height: 0rem;
+        width: 0rem;
+      }
+      @include laptop {
+        height: 0rem;
+        width: 0rem;
+      }
+      @include desktop {
+        height: 0rem;
+        width: 0rem;
+      }
   }
 .picture-gallery {
     position: relative;
-    margin: 0rem;
+    margin: 0 auto;
   }
   .picture {
     height: 35vh;
@@ -55,6 +69,22 @@
     transition: all 0.3s;
     outline-offset: 1;
     border: 1rem solid grey;
+    @include phone{
+        height: 10rem;
+        width: 10rem;
+      }
+      @include tablet {
+        height: 20rem;
+        width: 20rem;
+      }
+      @include laptop {
+        height: 30rem;
+        width: 30rem;
+      }
+      @include desktop {
+        height: 35rem;
+        width: 35rem;
+      }
   }
   .one {
     top: 15rem;
