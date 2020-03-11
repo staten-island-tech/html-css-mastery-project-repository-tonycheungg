@@ -1,5 +1,5 @@
 @import "_variables.scss";
-.navigation_checkbox{
+ .navigation_checkbox{
     display: none;
 }
 .navigation_button{
@@ -52,6 +52,10 @@ left: 0rem;
     transform: rotate(135deg);
     top: 0;
 }
+.navigation_checkbox:checked + .navigation_button .navigation_icon::after{
+    transform: rotate(-135deg);
+    top: 0;
+}
 .navigation_list{
     position: absolute;
     top: 50%;
@@ -71,7 +75,7 @@ left: 0rem;
     left: 0;
     z-index: 1500;
     opacity: 0%; 
-    width: 100%;
+    width: 0%;
     transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .navigation_background{
@@ -85,8 +89,6 @@ left: 0rem;
         rgba(41,152,255,1),
         rgba(40,180,133,1),);
         z-index: 1000;
-        transition: transform .8s;
-        transform: scale(80);
 }
 .navigation_link, .navigation_link:link, .navigation_link:visited{
     display: inline-block;
@@ -103,7 +105,7 @@ left: 0rem;
 .navigation_link:hover, .navigation_link:active{
     background-position: 100%;
     color: rgba(41, 152, 255,1);
-    transform: translate(1rem);
+    transform: translateX(1rem);
 }
 .navigation_checkbox:checked~.navigation_background{
 transform: scale(80);
@@ -111,4 +113,4 @@ transform: scale(80);
 .navigation_checkbox:checked~.navigation_nav{
     opacity: 1;
     width: 100%;
-}
+} 
